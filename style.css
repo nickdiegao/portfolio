@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -16,11 +18,11 @@
     --cor-textos: #BB4430;
     --cor-links: #011638; */
 
-    --cor-de-fundo:  #EBE9E9;
-    --cor-titulos:  #3581B8;
-    --cor-nome: #3581B8;
+    --cor-de-fundo:  #ffffff;
+    --cor-titulos:  #333333;
+    --cor-nome: #1abc9c;
     --cor-textos: #ff802c;
-    --cor-links: #3581B8;
+    --cor-links: #9b59b6;
 
 }
 
@@ -42,7 +44,7 @@ body {
 
 .menu-link {
     font-family: var(--fonte-primaria);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.8em;
     text-decoration: none;
     color: var(--cor-titulos);
@@ -73,6 +75,7 @@ body {
 .botao-dark-mode:hover {
     transform: scale(1.1);
     background-color: #a3a3a3;
+    color: var(--cor-de-fundo);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
@@ -101,9 +104,9 @@ body {
 
 .nome-aluno {
     font-family: var(--fonte-primaria);
+    font-weight: 800;
     color: var(--cor-nome);
     text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-texto {
@@ -136,7 +139,6 @@ body {
 
 .card-link:hover {
     text-decoration: underline;
-    color: var(--cor-nome);
     transform: scale(1.03);
 }
 
@@ -176,7 +178,7 @@ body {
     }
 
     .botao-dark-mode {
-        top: 1.8em;
+        top: 2em;
         margin-right: 10em;
     }
 
@@ -184,12 +186,19 @@ body {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        margin-top: 1.5em;
+        margin-top: 1.8em;
+    }
+
+    .card-link {
+        text-decoration: underline;
     }
 
     .quebra-linha {
         display: block;
         border: 1px solid rgb(125, 125, 125);
+    }
+
+    .rodape {
+        font-size: 0.8em;
     }
 }
