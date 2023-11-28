@@ -155,5 +155,42 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     bottom: 0;
+    width: auto;
 }
 
+.quebra-linha {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 5% 0 0 0;
+    }
+
+    .cabecalho-menu {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin-left: 1em;
+    }
+
+    .botao-dark-mode {
+        top: 1.8em;
+        margin-right: 10em;
+    }
+
+    .apresentacao-alunos {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1.5em;
+    }
+
+    .quebra-linha {
+        display: block;
+        border: 1px solid rgb(125, 125, 125);
+    }
+}
