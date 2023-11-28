@@ -321,6 +321,8 @@ body {
     .imagens-alt {
         width: 40vh;
         margin: 1em 0 0 0;
+        position: relative;
+        right: 10px;
     }
 
     .imagem-card {
