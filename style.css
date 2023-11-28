@@ -62,7 +62,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 2em 2em 0 0;
+    margin: 2em 3em 0 0;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -73,6 +73,54 @@ body {
 }
 
 .botao-dark-mode:hover {
+    transform: scale(1.1);
+    background-color: #a3a3a3;
+    color: var(--cor-de-fundo);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.botao-fonte {
+    border: none;
+    background-color: var(--cor-nome);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5em 5em 0 0;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    color: var(--cor-de-fundo);
+}
+
+.botao-fonte:hover {
+    transform: scale(1.1);
+    background-color: #a3a3a3;
+    color: var(--cor-de-fundo);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.botao-fonte-menos {
+    border: none;
+    background-color: var(--cor-nome);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5em 3em 0 0;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    color: var(--cor-de-fundo);
+}
+
+.botao-fonte-menos:hover {
     transform: scale(1.1);
     background-color: #a3a3a3;
     color: var(--cor-de-fundo);
@@ -163,6 +211,51 @@ body {
     display: none;
 }
 
+/*Galeria de imagens*/
+.galeria-imagens {
+    box-sizing: border-box;
+    margin: 3% 10% 5% 18%;
+    display: flex;
+    flex-direction: row;
+    max-width: 100px;
+    gap: 130px;
+}
+
+.imagens-alt {
+    width: auto;
+    border: 2px solid var(--cor-links);
+    padding: 0.4em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.imagem-card {
+    width: 50vh;
+    border-radius: 0.7em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.imagem-card:hover {
+    transform: scale(1.1);
+}
+
+/**/
+
+.texto-galeria {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin: 1em 2em 1em 0;
+}
+
+
 @media (max-width: 1200px) {
 
     .cabecalho {
@@ -196,6 +289,35 @@ body {
     .quebra-linha {
         display: block;
         border: 1px solid rgb(125, 125, 125);
+    }
+
+    .botao-fonte {
+        margin-right: 2.8em;
+    }
+
+    .botao-fonte-menos {
+        margin-right: 1em;
+        padding: 5px;
+    }
+
+    .galeria-imagens {
+        flex-direction: column;
+        justify-content: left;
+        position: relative;
+        left: -20px;
+    }
+
+    .imagens-alt {
+        width: 40vh;
+        margin: 1em 0 0 0;
+    }
+
+    .imagem-card {
+        width: 40vh;
+    }
+
+    .texto-galeria {
+        margin: 2em 2em 0 2em;
     }
 
     .rodape {

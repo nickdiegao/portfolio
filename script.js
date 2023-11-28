@@ -5,9 +5,9 @@ function alterarCor() {
     let tituloDesc = document.querySelectorAll('.titulo-descricao');
     let corLinks = document.querySelectorAll('.card-link');
     let rodape = document.querySelectorAll('.rodape');
-    let botao = document.querySelector('#botao')
-
-    let modoAtual = localStorage.getItem('modo');
+    let botao = document.querySelector('#botao');
+    let botaoAumenta = document.querySelector('.botao-fonte');
+    let botaoDiminui = document.querySelector('.botao-fonte-menos');
 
     //dark mode
     let corBodyD = '#1d1d1d'
@@ -25,6 +25,10 @@ function alterarCor() {
 
     if (botao.value === 'DARK MODE') {
         botao.value = 'WHITE MODE';
+        botaoAumenta.style.color = corBodyD
+        botaoAumenta.style.backgroundColor = corNomesD
+        botaoDiminui.style.color = corBodyD
+        botaoDiminui.style.backgroundColor = corNomesD
         botao.style.color = corBodyD;
         botao.style.backgroundColor = corNomesD;
         document.body.style.backgroundColor = corBodyD
@@ -57,6 +61,10 @@ function alterarCor() {
 
       } else {
         botao.value = 'DARK MODE';
+        botaoAumenta.style.color = corBodyW;
+        botaoAumenta.style.backgroundColor = corNomesW;
+        botaoDiminui.style.color = corBodyW;
+        botaoDiminui.style.backgroundColor = corNomesW;
         botao.style.color = corBodyW;
         botao.style.backgroundColor = corNomesW;
         document.body.style.backgroundColor = corBodyW
@@ -87,3 +95,34 @@ function alterarCor() {
         })
       }
 }
+
+function aumentaFonte() {
+    let paragrafo = document.querySelectorAll('.card-texto');
+    
+    paragrafo.forEach(function(paragrafo){
+        let estiloAtual = window.getComputedStyle(paragrafo, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho = tamanhoTotal * 1.2
+            paragrafo.style.fontSize = novoTamanho + 'px'
+        }
+    })
+}
+
+function diminuiFonte() {
+    let paragrafo = document.querySelectorAll('.card-texto');
+    
+    paragrafo.forEach(function(paragrafo){
+        let estiloAtual = window.getComputedStyle(paragrafo, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho = tamanhoTotal - (tamanhoTotal * 0.2)
+            paragrafo.style.fontSize = novoTamanho + 'px'
+        }
+    })
+}
+
+
+
