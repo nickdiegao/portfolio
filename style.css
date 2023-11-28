@@ -221,6 +221,11 @@ body {
     gap: 130px;
 }
 
+.imagens {
+    display: flex;
+    gap: 140px;
+}
+
 .imagens-alt {
     width: auto;
     border: 2px solid var(--cor-links);
@@ -229,6 +234,7 @@ body {
     flex-direction: column;
     text-align: center;
     border-radius: 1em;
+    margin-bottom: 1em;
 }
 
 .imagem-card {
@@ -292,11 +298,11 @@ body {
     }
 
     .botao-fonte {
-        margin-right: 2.8em;
+        margin-right: 3em;
     }
 
     .botao-fonte-menos {
-        margin-right: 1em;
+        margin-right: 1.3em;
         padding: 5px;
     }
 
@@ -305,6 +311,11 @@ body {
         justify-content: left;
         position: relative;
         left: -20px;
+    }
+
+    .imagens {
+        flex-direction: column;
+        gap: 17px;
     }
 
     .imagens-alt {
