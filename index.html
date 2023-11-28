@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a href="" class="menu-link">Home</a>
+            <a href="" class="menu-link">Portfolio</a>
+            <a href="" class="menu-link">Formulario</a>
+        </nav>
+    </header>
+    <input type="button" value="DARK MODE" class="botao-dark-mode" onclick="alterarCor()" id="botao">
+
+    <main class="card-main">
+
+        <section class="apresentacao-alunos">
+            <div class="card-aluno">
+                <h2 class="nome-aluno">
+                    Nicholas Diego
+                </h2>
+                <p class="card-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veniam ex placeat voluptatem nemo possimus dignissimos, asperiores nisi nobis exercitationem consequatur.</p>
+                <div class="descricao">
+                    <p class="titulo-descricao">Certicações</p>
+                    <a href="" class="card-link" onmouseover="adicionarClasse(this)" onmouseout="removerClasse(this)">Graduação em Analise e Desenvolvimento de sistemas - UNINASSAU</a>
+                    <a href="" class="card-link">Curso Técnico em Tecnologia da Informação - SENAI</a>
+
+                    <br>
+
+                    <p class="titulo-descricao">Estudos</p>
+                    <a href="" class="card-link">Formação a partir do zero: iniciante em programação - ALURA</a>
+                    <a href="" class="card-link">Formação a partir do zero: HTML e CSS para projetos web - ALURA</a>
+                    <a href="" class="card-link">Java COMPLETO 2023 Programação Orientada a Objetos + Projetos - UDEMY</a>
+                    
+                </div>
+            </div>
+
+            <img src="assets/NICHOLAS PORTFOLIO1.jpg" alt="foto-nicholas" class="card-imagem">
+        </section>       
+    </main>
+
+    <footer class="rodape">
+        &copy Direitos de imagens reservados aos alunos.
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

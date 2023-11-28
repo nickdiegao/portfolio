@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+}
+
+:root {
+    --fonte-primaria: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Montserrat' , sans-serif;
+    /* --cor-de-fundo:  #F3A712;
+    --cor-titulos:  #141414;
+    --cor-nome: #EEF0F2;
+    --cor-textos: #BB4430;
+    --cor-links: #011638; */
+
+    --cor-de-fundo:  #EBE9E9;
+    --cor-titulos:  #3581B8;
+    --cor-nome: #3581B8;
+    --cor-textos: #ff802c;
+    --cor-links: #3581B8;
+
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 10%; 
+}
+
+.cabecalho-menu {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    font-size: 1.4em;
+}
+
+.menu-link {
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--cor-titulos);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.menu-link:hover {
+    transform: scale(1.4);
+}
+
+.botao-dark-mode {
+    border: none;
+    background-color: var(--cor-nome);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2em 2em 0 0;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--fonte-secundaria);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    color: var(--cor-de-fundo);
+}
+
+.botao-dark-mode:hover {
+    transform: scale(1.1);
+    background-color: #a3a3a3;
+    color: var(--cor-de-fundo);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.apresentacao-alunos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 2em;
+}
+
+.card-main {
+    display: flex; 
+    justify-content: space-between;
+    padding: 5% 15%;
+    gap: 22px;
+    flex-direction: column;
+}
+
+.card-aluno {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nome-aluno {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-nome);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-texto {
+    color: var(--cor-textos);
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    padding: 7px 0 0 0;
+}
+
+.card-imagem {
+    width: 70%;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-link {
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-textos);
+    font-size: 0.9em;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+    color: var(--cor-nome);
+    transform: scale(1.03);
+}
+
+.titulo-descricao {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-links);
+}
+
+.rodape{
+    padding: 16px;
+    color: var(--cor-de-fundo);
+    background-color: var(--cor-links);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.125rem;
+    font-weight: 400;
+    bottom: 0;
+}
+
