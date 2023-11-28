@@ -73,7 +73,6 @@ body {
 .botao-dark-mode:hover {
     transform: scale(1.1);
     background-color: #a3a3a3;
-    color: var(--cor-de-fundo);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
