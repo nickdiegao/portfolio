@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 <body>
     <header class="cabecalho">
@@ -20,38 +24,89 @@
     <main>
 
         <p class="card-texto texto-galeria">Projetos Nicholas Diego</p>
-        <div class="galeria-imagens">
-            <div class="imagens">
-                <div class="imagens-alt">
-                    <a href=""><img src="assets/Captura de Tela (245).png" alt="" class="imagem-card"></a>
-                    <p class="card-texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda doloribus impedit deserunt. Pariatur hic impedit incidunt, assumenda praesentium at voluptatem labore, voluptas accusantium harum similique tempora distinctio est alias error!</p>
-                </div>
-                <div class="imagens-alt">
-                    <a href=""><img src="assets/Captura de Tela (245).png" alt="" class="imagem-card"></a>
-                    <p class="card-texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda doloribus impedit deserunt. Pariatur hic impedit incidunt, assumenda praesentium at voluptatem labore, voluptas accusantium harum similique tempora distinctio est alias error!</p>
-                </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto para a reserva de ingresso de um teatro ou cinema</p>
+                <img src="assets/Captura de Tela (244).png" alt="" class="swiper-image"></div>
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto de um carrinho de compras para adiconar ou retirar ou limpar o carrinho</p>
+                <img src="assets/Captura de Tela (245).png" alt="" class="swiper-image"></div>
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto para simular um amigo secreto</p>
+                <img src="assets/Captura de Tela (246).png" alt="" class="swiper-image"></div>
             </div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <div class="swiper-scrollbar"></div>
         </div>
 
         <p class="card-texto texto-galeria">Projetos Nicholas Diego</p>
-        <div class="galeria-imagens">
-            <div class="imagens">
-                <div class="imagens-alt">
-                    <a href=""><img src="assets/Captura de Tela (244).png" alt="" class="imagem-card"></a>
-                    <p class="card-texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda doloribus impedit deserunt. Pariatur hic impedit incidunt, assumenda praesentium at voluptatem labore, voluptas accusantium harum similique tempora distinctio est alias error!</p>
-                </div>
-                <div class="imagens-alt">
-                    <a href=""><img src="assets/Captura de Tela (244).png" alt="" class="imagem-card"></a>
-                    <p class="card-texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda doloribus impedit deserunt. Pariatur hic impedit incidunt, assumenda praesentium at voluptatem labore, voluptas accusantium harum similique tempora distinctio est alias error!</p>
-                </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto para a reserva de ingresso de um teatro ou cinema</p>
+                <img src="assets/Captura de Tela (244).png" alt="" class="swiper-image"></div>
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto de um carrinho de compras para adiconar ou retirar ou limpar o carrinho</p>
+                <img src="assets/Captura de Tela (245).png" alt="" class="swiper-image"></div>
+            <div class="swiper-slide">
+                <p class="card-texto">Projeto para simular um amigo secreto</p>
+                <img src="assets/Captura de Tela (246).png" alt="" class="swiper-image"></div>
             </div>
-        </div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <div class="swiper-scrollbar"></div>
+        </div>    
 
     </main>
-    <footer class="rodape">
+    <footer class="rodape rodapejs">
         &copy Direitos de imagens reservados aos alunos.
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            // slidesPerView: 1,
+            // spaceBetween: 10,
+            // autoplay: {
+            //     delay: 2000, 
+            //     disableOnInteraction: false,
+            // },
+
+            // effect: 'cube', // Define o efeito como 'cube'
+            // cubeEffect: {
+            //     slideShadows: true, // Adiciona sombras aos slides do cubo
+            //     shadow: true, // Adiciona sombras ao cubo
+            //     shadowOffset: 20, // Define a distância da sombra
+            //     shadowScale: 0.94, // Define a escala da sombra
+            // },
+        });
+    </script>
 </body>
 </html>

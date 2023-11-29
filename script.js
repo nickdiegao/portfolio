@@ -1,3 +1,4 @@
+
 function alterarCor() {
     let cabecalho = document.querySelectorAll('.menu-link');
     let corTexto = document.querySelectorAll('.card-texto');
@@ -123,6 +124,4 @@ function diminuiFonte() {
         }
     })
 }
-
-
 
