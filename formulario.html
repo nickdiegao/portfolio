@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+
 </head>
 <body>
     <header class="cabecalho">
@@ -19,10 +20,38 @@
     <input type="button" value="+" class="botao-fonte" onclick="aumentaFonte()">
     <input type="button" value="-" class="botao-fonte-menos" onclick="diminuiFonte()">
     <main>
+
+        <div class="container">
+
+            <div class="container-box">
+                <p class="card-texto">Nome e sobrenome</p>
+                <input type="text" required id="nome-sobrenome" class="inputs container-input">
+            </div>
+            
+            <div class="container-box">
+                <p class="card-texto">Telefone</p>
+                <input type="tel" required id="telefone" placeholder="(XX) XXXXX-XXXX" class="inputs container-input">
+            </div>
+
+            <div class="container-box">
+                <p class="card-texto">E-mail</p>
+                <input type="email" required id="email" class="inputs container-input">
+            </div>
+
+            <div class="container-box">
+                <p class="card-texto">Formulário</p>
+                <textarea name="" id="formulario" cols="75" rows="10" class="inputs"></textarea>
+            </div>
+
+            <input type="button" value="Enviar" onclick="verificarCampos()" class="botao-enviar">
+        </div>
+
+
     </main>
     <footer class="rodape">
         &copy Direitos de imagens reservados aos alunos.
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5"></script>
     <script src="script.js"></script>
 </body>
 </html>

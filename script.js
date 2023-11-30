@@ -1,4 +1,3 @@
-
 function alterarCor() {
     let cabecalho = document.querySelectorAll('.menu-link');
     let corTexto = document.querySelectorAll('.card-texto');
@@ -125,3 +124,64 @@ function diminuiFonte() {
     })
 }
 
+//FUNÇÕES PARA VERIFICAÇÃO DO FORMULÁRIO
+function verificarCampos() {
+    let nomeSobrenome = document.getElementById('nome-sobrenome');
+    let telefone = document.getElementById('telefone');
+    let email = document.getElementById('email');
+
+    if (!nomeSobrenome.value.trim()) {
+        nomeSobrenome.classList.add('campo-vazio');
+    } else {
+        nomeSobrenome.classList.remove('campo-vazio');
+    }
+
+    if (!telefone.value.trim()) {
+        telefone.classList.add('campo-vazio');
+    } else {
+        telefone.classList.remove('campo-vazio');
+    }
+
+    if (!email.value.trim()) {
+        email.classList.add('campo-vazio');
+    } else {
+        email.classList.remove('campo-vazio');
+    }
+
+    if (nomeSobrenome.validity.valid && telefone.validity.valid && email.validity.valid) {
+        enviarForm();
+    } else {
+        erroForm();
+    }
+}
+
+function enviarForm() {
+
+    let nomeSobrenome = document.querySelector('#nome-sobrenome');
+    let telefone = document.querySelector('#telefone');
+    let email = document.querySelector('#email');
+    let form = document.querySelector('#formulario')
+
+    let nome = nomeSobrenome.value;
+
+    Swal.fire({
+    title: 'Formulário enviado',
+    text: `A mensagem de ${nome} foi enviada`,
+    icon: 'success',
+    confirmButtonText: 'OK'
+    })
+
+    nomeSobrenome.value = ''
+    telefone.value = ''
+    email.value = ''
+    form.value = ''
+}
+
+function erroForm() {
+    Swal.fire({
+    title: 'Formulário não enviado',
+    text: 'Campos faltanddo',
+    icon: 'error',
+    confirmButtonText: 'OK'
+    })
+}
