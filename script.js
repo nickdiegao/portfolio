@@ -93,7 +93,7 @@ function alterarCor() {
             rodape.style.backgroundColor = corExtraW
             rodape.style.color = corBodyW
         })
-      }
+    }
 }
 
 function aumentaFonte() {
@@ -124,11 +124,44 @@ function diminuiFonte() {
     })
 }
 
+//FUNÇAÕ DO SWIPERJS PARA A PARTE DOS PROJETOS
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+
+    // slidesPerView: 1,
+    // spaceBetween: 10,
+    // autoplay: {
+    //     delay: 2000, 
+    //     disableOnInteraction: false,
+    // },
+
+    // effect: 'cube', // Define o efeito como 'cube'
+    // cubeEffect: {
+    //     slideShadows: true, // Adiciona sombras aos slides do cubo
+    //     shadow: true, // Adiciona sombras ao cubo
+    //     shadowOffset: 20, // Define a distância da sombra
+    //     shadowScale: 0.94, // Define a escala da sombra
+    // },
+});
+
+
 //FUNÇÕES PARA VERIFICAÇÃO DO FORMULÁRIO
 function verificarCampos() {
+
     let nomeSobrenome = document.getElementById('nome-sobrenome');
     let telefone = document.getElementById('telefone');
     let email = document.getElementById('email');
+    let formum = document.getElementById('formulario');
 
     if (!nomeSobrenome.value.trim()) {
         nomeSobrenome.classList.add('campo-vazio');
@@ -148,7 +181,13 @@ function verificarCampos() {
         email.classList.remove('campo-vazio');
     }
 
-    if (nomeSobrenome.validity.valid && telefone.validity.valid && email.validity.valid) {
+    if (!formum.value.trim()) {
+        formum.classList.add('campo-vazio');    
+    } else {
+        formum.classList.remove('campo-vazio');
+    }
+
+    if (nomeSobrenome.validity.valid && telefone.validity.valid && email.validity.valid && formum.validity.valid) {
         enviarForm();
     } else {
         erroForm();
@@ -160,7 +199,7 @@ function enviarForm() {
     let nomeSobrenome = document.querySelector('#nome-sobrenome');
     let telefone = document.querySelector('#telefone');
     let email = document.querySelector('#email');
-    let form = document.querySelector('#formulario')
+    let formum = document.querySelector('#formulario')
 
     let nome = nomeSobrenome.value;
 
@@ -174,7 +213,8 @@ function enviarForm() {
     nomeSobrenome.value = ''
     telefone.value = ''
     email.value = ''
-    form.value = ''
+    formum.value = ''
+
 }
 
 function erroForm() {
@@ -185,3 +225,14 @@ function erroForm() {
     confirmButtonText: 'OK'
     })
 }
+
+let texto = document.querySelector('#formulario')
+let frase = document.querySelector('#aviso-form')
+
+texto.addEventListener('keyup', function(){
+    if (texto.value.length < 10) {
+        frase.innerHTML = 'Mínimo 10 caracteres'
+    } else {
+        frase.innerHTML = ''
+    }
+})

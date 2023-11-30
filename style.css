@@ -318,7 +318,6 @@ body {
 }
 
 .campo-vazio {
-    border-style: dotted;
     border: 2px solid red;
 }
 
@@ -419,6 +418,4 @@ body {
     .inputs {
         width: 70%;
     }
-
-
 }

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/14/14573.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <header class="cabecalho">
@@ -40,7 +41,8 @@
 
             <div class="container-box">
                 <p class="card-texto">Formulário</p>
-                <textarea name="" id="formulario" cols="75" rows="10" class="inputs"></textarea>
+                <textarea name="" placeholder="Digite sua opinião sobre o site" id="formulario" cols="75" rows="10" class="inputs"></textarea>
+                <p id="aviso-form" class="card-texto"></p>
             </div>
 
             <input type="button" value="Enviar" onclick="verificarCampos()" class="botao-enviar">
@@ -52,6 +54,7 @@
         &copy Direitos de imagens reservados aos alunos.
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
