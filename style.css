@@ -203,6 +203,8 @@ body {
 
 .card-imagem-foto1 {
     width: 90%;
+    position: relative;
+    right: 1.8em;
     border-radius: 1em;
 }
 
@@ -459,5 +461,9 @@ body {
 
     .inputs {
         width: 70%;
+    }
+
+    .card-imagem-foto1 {
+        right: 0;
     }
 }
