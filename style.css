@@ -10,31 +10,34 @@
 }
 
 .swiper {
-    width: 700px;
-    height: 400px;
+    width: 1000px;
+    height: 600px;
     border-radius: 10px;
 }
 
 .swiper-image {
-    width: 700px;
-    height: 400px;
+    width: 1000px;
+    height: 600px;
     border-radius: 10px;
 }
 
 :root {
     --fonte-primaria: 'Poppins', sans-serif;
     --fonte-secundaria: 'Montserrat' , sans-serif;
-    /* --cor-de-fundo:  #F3A712;
-    --cor-titulos:  #141414;
-    --cor-nome: #EEF0F2;
-    --cor-textos: #BB4430;
-    --cor-links: #011638; */
 
-    --cor-de-fundo:  #ffffff;
-    --cor-titulos:  #333333;
-    --cor-nome: #1abc9c;
-    --cor-textos: #ff802c;
+    /*let corBodyD = '#1d1d1d'
+    let corCabecalhoD = '#ffffff'
+    let corNomesD = '#28a745'
+    let corTextosD = '#ffc107'
+    let corExtraD = '#9b59b6'
+    */
+
+    --cor-de-fundo:  #1d1d1d;
+    --cor-titulos:  #ffffff;
+    --cor-nome: #28a745;
+    --cor-textos: #ffc107;
     --cor-links: #9b59b6;
+    --cor-borda: #333333;
 
 }
 
@@ -159,6 +162,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -180,6 +185,12 @@ body {
     width: 70%;
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-imagem-foto {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
 }
 
 .descricao{
@@ -216,7 +227,6 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     bottom: 0;
-    width: auto;
 }
 
 .quebra-linha {
@@ -277,6 +287,10 @@ body {
     margin-top: 10em;
 }
 
+.rodapejss {
+    margin-top: 14em;
+}
+
 /*Formulário*/
 
 .botao-enviar {
@@ -291,6 +305,7 @@ body {
     cursor: pointer;
     transform: scale(1);
     transition: transform 0.3s ease;
+    margin-bottom: 10em;
 }
 
 .botao-enviar:hover {
@@ -309,7 +324,7 @@ body {
     padding: 10px;
     font-family: var(--fonte-primaria);
     font-weight: 600;
-    border: 1px solid var(--cor-titulos);
+    border: 1px solid var(--cor-borda);
     border-radius: 10px;
 }
 
@@ -320,6 +335,19 @@ body {
 .campo-vazio {
     border: 2px solid red;
 }
+
+/* ::-webkit-scrollbar {
+    width: 7px;   
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--cor-links);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+} */
 
 @media (max-width: 1200px) {
 

@@ -23,43 +23,7 @@ function alterarCor() {
     let corTextosW = '#ff802c'
     let corExtraW = '#9b59b6'
 
-    if (botao.value === 'DARK MODE') {
-        botao.value = 'WHITE MODE';
-        botaoAumenta.style.color = corBodyD
-        botaoAumenta.style.backgroundColor = corNomesD
-        botaoDiminui.style.color = corBodyD
-        botaoDiminui.style.backgroundColor = corNomesD
-        botao.style.color = corBodyD;
-        botao.style.backgroundColor = corNomesD;
-        document.body.style.backgroundColor = corBodyD
-
-        cabecalho.forEach(function(cabecalho){
-            cabecalho.style.color = corCabecalhoD;
-        })
-        
-        corTexto.forEach(function(corTexto){
-            corTexto.style.color = corTextosD;
-            // console.log('funciona')
-        });
-
-        nomeAluno.forEach(function(nomeAluno){
-            nomeAluno.style.color = corNomesD;
-        })
-
-        tituloDesc.forEach(function(tituloDesc) {
-            tituloDesc.style.color = corExtraD; 
-        });
-
-        corLinks.forEach(function(corLinks){
-            corLinks.style.color = corTextosD;
-        })
-
-        rodape.forEach(function(rodape){
-            rodape.style.backgroundColor = corExtraD
-            rodape.style.color = corBodyD
-        })
-
-      } else {
+    if (botao.value === 'WHITE MODE') {
         botao.value = 'DARK MODE';
         botaoAumenta.style.color = corBodyW;
         botaoAumenta.style.backgroundColor = corNomesW;
@@ -93,11 +57,48 @@ function alterarCor() {
             rodape.style.backgroundColor = corExtraW
             rodape.style.color = corBodyW
         })
-    }
+
+      } else {
+        botao.value = 'WHITE MODE';
+        botaoAumenta.style.color = corBodyD
+        botaoAumenta.style.backgroundColor = corNomesD
+        botaoDiminui.style.color = corBodyD
+        botaoDiminui.style.backgroundColor = corNomesD
+        botao.style.color = corBodyD;
+        botao.style.backgroundColor = corNomesD;
+        document.body.style.backgroundColor = corBodyD
+
+        cabecalho.forEach(function(cabecalho){
+            cabecalho.style.color = corCabecalhoD;
+        })
+        
+        corTexto.forEach(function(corTexto){
+            corTexto.style.color = corTextosD;
+            // console.log('funciona')
+        });
+
+        nomeAluno.forEach(function(nomeAluno){
+            nomeAluno.style.color = corNomesD;
+        })
+
+        tituloDesc.forEach(function(tituloDesc) {
+            tituloDesc.style.color = corExtraD; 
+        });
+
+        corLinks.forEach(function(corLinks){
+            corLinks.style.color = corTextosD;
+        })
+
+        rodape.forEach(function(rodape){
+            rodape.style.backgroundColor = corExtraD
+            rodape.style.color = corBodyD
+        }) }
 }
 
 function aumentaFonte() {
     let paragrafo = document.querySelectorAll('.card-texto');
+    let cardLinks = document.querySelectorAll('.card-link');
+    let tituloDesc = document.querySelectorAll('.titulo-descricao');
     
     paragrafo.forEach(function(paragrafo){
         let estiloAtual = window.getComputedStyle(paragrafo, null).getPropertyValue('font-size');
@@ -108,10 +109,32 @@ function aumentaFonte() {
             paragrafo.style.fontSize = novoTamanho + 'px'
         }
     })
+
+    cardLinks.forEach(function(cardLinks){
+        let estiloAtual = window.getComputedStyle(cardLinks, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho = tamanhoTotal * 1.2
+            cardLinks.style.fontSize = novoTamanho + 'px'
+        }
+    })
+
+    tituloDesc.forEach(function(tituloDesc){
+        let estiloAtual = window.getComputedStyle(tituloDesc, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho = tamanhoTotal * 1.2
+            tituloDesc.style.fontSize = novoTamanho + 'px'
+        }
+    })
 }
 
 function diminuiFonte() {
     let paragrafo = document.querySelectorAll('.card-texto');
+    let cardLinks = document.querySelectorAll('.card-link');
+    let tituloDesc = document.querySelectorAll('.titulo-descricao');
     
     paragrafo.forEach(function(paragrafo){
         let estiloAtual = window.getComputedStyle(paragrafo, null).getPropertyValue('font-size');
@@ -120,6 +143,26 @@ function diminuiFonte() {
             let tamanhoTotal = parseFloat(estiloAtual)
             let novoTamanho = tamanhoTotal - (tamanhoTotal * 0.2)
             paragrafo.style.fontSize = novoTamanho + 'px'
+        }
+    })
+
+    cardLinks.forEach(function(cardLinks){
+        let estiloAtual = window.getComputedStyle(cardLinks, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho =  tamanhoTotal - (tamanhoTotal * 0.2)
+            cardLinks.style.fontSize = novoTamanho + 'px'
+        }
+    })
+
+    tituloDesc.forEach(function(tituloDesc){
+        let estiloAtual = window.getComputedStyle(tituloDesc, null).getPropertyValue('font-size');
+
+        if (estiloAtual) {
+            let tamanhoTotal = parseFloat(estiloAtual)
+            let novoTamanho = tamanhoTotal - (tamanhoTotal * 0.2)
+            tituloDesc.style.fontSize = novoTamanho + 'px'
         }
     })
 }
