@@ -137,21 +137,6 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-
-    // slidesPerView: 1,
-    // spaceBetween: 10,
-    // autoplay: {
-    //     delay: 2000, 
-    //     disableOnInteraction: false,
-    // },
-
-    // effect: 'cube', // Define o efeito como 'cube'
-    // cubeEffect: {
-    //     slideShadows: true, // Adiciona sombras aos slides do cubo
-    //     shadow: true, // Adiciona sombras ao cubo
-    //     shadowOffset: 20, // Define a distância da sombra
-    //     shadowScale: 0.94, // Define a escala da sombra
-    // },
 });
 
 
@@ -231,8 +216,8 @@ let frase = document.querySelector('#aviso-form')
 
 texto.addEventListener('keyup', function(){
     if (texto.value.length < 10) {
-        frase.innerHTML = 'Mínimo 10 caracteres'
+        frase.innerHTML = `Mínimo 10 caracteres`
     } else {
-        frase.innerHTML = ''
+        frase.innerHTML = ` Caracteres: ${texto.value.length}`
     }
 })
