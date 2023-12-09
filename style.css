@@ -379,9 +379,9 @@ body {
     }
 
     .botao-dark-mode {
-        margin-top: 2.6em;
-        top: 2em;
-        margin-right: 14.5em;
+        margin-top: 2em;
+        top: 3em;
+        margin-right: 14.6em;
     }
 
     .apresentacao-alunos {
@@ -401,11 +401,11 @@ body {
     }
 
     .botao-fonte {
-        margin-right: 3em;
+        margin-right: 5em;
     }
 
     .botao-fonte-menos {
-        margin-right: 1.3em;
+        margin-right: 3em;
         padding: 5px;
     }
 
