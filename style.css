@@ -364,7 +364,7 @@ body {
     background-color: #555;
 } */
 
-@media (max-width: 1200px) {
+@media (width: 821px) and (height: 492px) {
 
     .cabecalho {
         padding: 5% 0 0 0;
@@ -382,6 +382,110 @@ body {
         margin-top: 2em;
         top: 3em;
         margin-right: 14.6em;
+    }
+
+    .apresentacao-alunos {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.8em;
+    }
+
+    .card-link {
+        text-decoration: underline;
+    }
+
+    .quebra-linha {
+        display: block;
+        border: 1px solid rgb(125, 125, 125);
+    }
+
+    .botao-fonte {
+        margin-right: 5em;
+    }
+
+    .botao-fonte-menos {
+        margin-right: 3em;
+        padding: 5px;
+    }
+
+    .galeria-imagens {
+        flex-direction: column;
+        justify-content: left;
+        position: relative;
+        left: -20px;
+    }
+
+    .imagens {
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .imagens-alt {
+        width: 40vh;
+        margin: 1em 0 0 0;
+        position: relative;
+        right: 10px;
+    }
+
+    .imagem-card {
+        width: 40vh;
+    }
+
+    .texto-galeria {
+        margin: 2em 2em 0 2em;
+    }
+
+    .rodape {
+        font-size: 0.8em;
+    }
+
+    .texto-galeria {
+        font-size: 1.5em;
+    }
+
+    .swiper {
+        width: 300px;
+        height: 200px;
+    }
+
+    .swiper-image {
+        width: 300px;
+        height: 200px;
+    }
+
+    .container {
+        margin-top: 3em;
+        margin-bottom: 5em;
+    }
+
+    .inputs {
+        width: 70%;
+    }
+
+    .card-imagem-foto1 {
+        right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 5% 0 0 0;
+    }
+
+    .cabecalho-menu {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin-left: 0.7em;
+    }
+
+    .botao-dark-mode {
+        margin-top: 2em;
+        top: 2em;
+        margin-right: 10em;
     }
 
     .apresentacao-alunos {
